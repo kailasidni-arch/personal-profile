@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaila Neva Sidni — Profile</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="overlay"></div>
+    <img src="./images/profile.png" alt="Kaila Neva Sidni" class="profile-pic" />
+    <h1 class="name">Kaila Neva Sidni</h1>
+    <p class="profession">Informatics Student</p>
+    <a href="cv.pdf" download class="btn"><i class="fa fa-download"></i> Download CV</a>
+  </header>
+
+  <!-- About -->
+  <section class="card fade-in">
+    <h2><i class="fa fa-user"></i> About Me</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="about sticker" class="sticker" />
+    <p>
+      I’m Kaila Neva Sidni, an Informatics student with a strong passion for technology and web development. 
+      I enjoy exploring programming and design as I aim to become a skilled web programmer. 
+      Outside academics, I love action & fantasy movies and reading novels, especially works by Tere Liye.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="card fade-in">
+    <h2><i class="fa fa-code"></i> Skills</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/919/919854.png" alt="skills sticker" class="sticker" />
+    <ul class="list">
+      <li>HTML & CSS</li>
+      <li>Python & Java (basic)</li>
+      <li>Microsoft Office</li>
+      <li>Communication</li>
+      <li>Teamwork</li>
+    </ul>
+  </section>
+
+  <!-- Education -->
+  <section class="card fade-in">
+    <h2><i class="fa fa-graduation-cap"></i> Education</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="education sticker" class="sticker" />
+    <ul class="list">
+      <li><b>2025 – Now:</b> Informatics, President University</li>
+      <li><b>2023 – 2025:</b> MAN 1 Pekanbaru</li>
+      <li><b>2020 – 2023:</b> SMP IT Excellent Payakumbuh</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="card fade-in">
+    <h2><i class="fa fa-briefcase"></i> Portfolio</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="portfolio sticker" class="sticker" />
+    <ul class="list">
+      <li><a href="#">Portfolio Website</a></li>
+      <li><a href="#">Simple To-Do App</a></li>
+    </ul>
+    <p><em>More projects coming soon...</em></p>
+  </section>
+
+  <!-- Contact -->
+  <section class="card fade-in">
+    <h2><i class="fa fa-envelope"></i> Contact</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="contact sticker" class="sticker" />
+    <p><i class="fa fa-envelope"></i> <a href="mailto:kailaneva07@gmail.com">kailaneva07@gmail.com</a></p>
+    <p><i class="fa fa-phone"></i> +62 823 8621 0675</p>
+    <p><i class="fa fa-instagram"></i> <a href="https://instagram.com/kaaiilaans_" target="_blank">@kaaiilaans_</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Kaila Neva Sidni</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
