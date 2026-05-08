@@ -787,6 +787,57 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* FIX UNTUK MOBILE BY GEMINI */
+    @media (max-width: 768px) {
+        /* 1. Reset Container Utama */
+        section, .hero, .container {
+            flex-direction: column-reverse !important; /* Gambar di atas, teks di bawah */
+            text-align: center !important;
+            padding: 80px 20px 40px !important;
+            height: auto !important;
+            min-height: 100vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        /* 2. Fix Ukuran Font */
+        h1 {
+            font-size: 2.2rem !important;
+            line-height: 1.2 !important;
+        }
+
+        /* 3. Atur Gambar Agar Gak Nabrak */
+        .hero-image, .image-container, .profile-pic-wrapper {
+            width: 250px !important;
+            height: 250px !important;
+            margin: 0 auto 30px !important;
+            position: relative !important;
+            right: auto !important;
+            left: auto !important;
+            top: auto !important;
+        }
+
+        /* 4. Navbar & Menu Mobile */
+        nav {
+            padding: 15px 5% !important;
+        }
+        nav ul {
+            display: none !important; /* Sembunyikan menu link dulu biar gak berantakan */
+        }
+
+        /* 5. Buttons & Socials */
+        .btn-group, .social-links {
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            gap: 15px !important;
+        }
+        
+        /* 6. Hilangkan overflow-x biar gak goyang kanan-kiri */
+        body {
+            overflow-x: hidden !important;
+        }
+    }
   </style>
 </head>
 <body>
