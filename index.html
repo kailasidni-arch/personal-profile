@@ -787,57 +787,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* FIX UNTUK MOBILE BY GEMINI */
-    @media (max-width: 768px) {
-        /* 1. Reset Container Utama */
-        section, .hero, .container {
-            flex-direction: column-reverse !important; /* Gambar di atas, teks di bawah */
-            text-align: center !important;
-            padding: 80px 20px 40px !important;
-            height: auto !important;
-            min-height: 100vh !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-
-        /* 2. Fix Ukuran Font */
-        h1 {
-            font-size: 2.2rem !important;
-            line-height: 1.2 !important;
-        }
-
-        /* 3. Atur Gambar Agar Gak Nabrak */
-        .hero-image, .image-container, .profile-pic-wrapper {
-            width: 250px !important;
-            height: 250px !important;
-            margin: 0 auto 30px !important;
-            position: relative !important;
-            right: auto !important;
-            left: auto !important;
-            top: auto !important;
-        }
-
-        /* 4. Navbar & Menu Mobile */
-        nav {
-            padding: 15px 5% !important;
-        }
-        nav ul {
-            display: none !important; /* Sembunyikan menu link dulu biar gak berantakan */
-        }
-
-        /* 5. Buttons & Socials */
-        .btn-group, .social-links {
-            justify-content: center !important;
-            flex-wrap: wrap !important;
-            gap: 15px !important;
-        }
-        
-        /* 6. Hilangkan overflow-x biar gak goyang kanan-kiri */
-        body {
-            overflow-x: hidden !important;
-        }
-    }
   </style>
 </head>
 <body>
@@ -1110,5 +1059,54 @@
     }, { threshold: 0.1 });
     reveals.forEach(r => observer.observe(r));
   </script>
+  <style>
+  @media (max-width: 768px) {
+    /* 1. Paksa container jadi kolom dan urutkan ulang */
+    #home .container {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding-top: 100px !important;
+    }
+
+    /* 2. Container teks juga jadi kolom flex */
+    .hero-content {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+
+    /* 3. ATUR URUTAN (Magic Trick) */
+    .hero-badge { order: 1 !important; }
+    .hero-name  { order: 2 !important; }
+    .hero-title { order: 3 !important; margin-bottom: 30px !important; }
+    
+    /* FOTO JADI URUTAN KE-4 (Di bawah Creative Problem Solver) */
+    .hero-image { 
+      order: 4 !important; 
+      margin: 0 auto 30px !important;
+      position: relative !important;
+      right: auto !important;
+      transform: scale(0.9) !important; /* Biar gak kegedean di HP */
+    }
+
+    /* DESKRIPSI JADI URUTAN KE-5 */
+    .hero-desc    { order: 5 !important; }
+    .hero-buttons { order: 6 !important; }
+    .hero-socials { order: 7 !important; }
+
+    /* 4. Beresin perintilan foto */
+    .hero-img-ring, .hero-img-ring2 { display: none !important; }
+    .hero-terminal {
+      position: relative !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      margin: -20px auto 0 !important;
+      width: fit-content !important;
+    }
+  }
+</style>
 </body>
 </html>
